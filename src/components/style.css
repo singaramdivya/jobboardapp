@@ -1,0 +1,415 @@
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  font-size: 16px;
+  background-color: #f8f8f8;
+  overflow: auto;
+}
+
+/* Header Styles */
+header {
+  background-color: #333;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjusted Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:10px;
+  margin: 0 auto;
+  height: 100px; /* Decreased navbar height */
+}
+
+/* Logo Styles */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #e74c3c;
+  margin-left: 20px; /* Optional: adjust margin to fit in reduced height */
+  margin-top: 50px;
+}
+
+/* Menu Styles */
+.menu {
+  display: flex;
+  list-style: none;
+  margin-right: 10px; /* Adjust margin for better spacing in reduced height */
+}
+
+.menu li {
+  margin-left: 30px; /* Reduced spacing between menu items */
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 50px; /* Align links vertically within navbar */
+}
+
+/* Authentication (Sign In) Styles */
+.auth {
+  list-style: none;
+  margin-top: 50px;
+}
+
+.auth li {
+  display: inline;
+  margin-left: 100px; /* Reduced margin for the sign-in link */
+}
+
+.auth a {
+  color: #e74c3c;
+  text-decoration: none;
+  font-size: 16px;
+  margin-left: 100px;
+  line-height: 50px; /* Align the sign-in link vertically */
+}
+
+
+/* Home page component */
+.home-page-container{
+  overflow: hidden;
+}
+.hero {
+  display: flex;
+  flex-direction: row;
+  background-color: #2e3b4e;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  height:480px;
+  position:relative;
+}
+.hero-sub-section{
+  display: flex;
+  flex-direction: column;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.apply-btn, .companies-btn {
+  background-color: #e74c3c;
+  color: white;
+  padding: 15px 40px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
+
+.companies-btn {
+  background-color: #555;
+}
+
+/* jobcard component */
+
+.job-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width:700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.job-card h3{
+  color:#007bff;
+}
+.job-card h3,p{
+  padding:10px;
+}
+.job-card:hover {
+  border-color: #007bff;
+  transition: border-color 0.3s ease-in;
+}
+.job-card button{
+  width:120px;
+  height:40px;
+  background-color: #2e3b4e;
+  color:white;
+  border-radius: 7px;
+  margin-top: 10px;
+}
+
+/* jobs component */
+
+.jobs-page {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+}
+
+.top-section {
+  display: flex;
+  flex-direction: row; 
+  margin-top: 20px;
+  margin-left: 100px;
+}
+.top-section .button-section{
+  margin-right: 10px;
+}
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  width: 250px; 
+}
+
+.filter-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.filter-group input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width:300px;
+}
+.filter-group select{
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width:100px;
+}
+.search-btn, .reset-btn {
+  padding: 10px 15px;
+  margin-right: 20px;
+  margin-top: 20px; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  width:90px;
+  height: 40px;
+}
+
+.reset-btn {
+  background-color: #6c757d;
+}
+
+.search-btn:hover, .reset-btn:hover {
+  opacity: 0.9; 
+}
+
+
+.down-section {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.jobs-container {
+  flex-grow: 1;
+  margin-right: 200px;
+}
+
+.jobs-container p {
+  text-align: center;
+  color: #6c757d;
+}
+
+
+/* filter component */
+.filters {
+  width: 300px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-left: 100px;
+}
+
+.filters label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.filters input,
+.filters select {
+  /* width: 100%; */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+}
+input[type="checkbox"]{
+  margin-top: 40px;
+}
+
+.filters input::placeholder {
+  color: #888;
+}
+
+
+.filters .search-btn,
+.filters .reset-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.filters .reset-btn {
+  background-color: #6c757d;
+}
+
+.filters .search-btn:hover,
+.filters .reset-btn:hover {
+  opacity: 0.9;
+}
+
+/* Enhancements for mobile responsiveness */
+@media (max-width: 768px) {
+  .jobs-page {
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .top-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .down-section {
+    flex-direction: column;
+  }
+
+  .filters {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .jobs-container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+
+/* jobdetail component styles */
+
+.job-detail {
+  max-width: 800px; /* Limit the width of the job detail */
+  margin: 0 auto; /* Center the content */
+  padding: 20px; /* Padding around content */
+  background-color: #f9f9f9; /* Light background for contrast */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  height:100vh;
+}
+
+/* Job Title */
+.job-detail h2 {
+  font-size: 16px; /* Larger title */
+  color: #333; /* Darker color for the title */
+  margin-bottom: 15px; /* Space below the title */
+  text-align: center; /* Center align the title */
+}
+
+/* Job Detail Text */
+.job-detail p {
+  font-size: 16px; /* Standard text size */
+  line-height: 1.6; /* Space between lines */
+  color: #555; /* Slightly darker color for text */
+  margin-bottom: 10px; /* Space below each paragraph */
+}
+
+/* Strong Text */
+.job-detail p strong {
+  color: #000; /* Strong text color */
+}
+
+/* Image Styling */
+.job-detail img {
+  display: block; /* Block-level element to avoid inline gaps */
+  width: 100%; /* Full width image */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 20px; /* Space above the image */
+  border-radius: 8px; /* Rounded image corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the image */
+  height:50px;
+}
+
+.image-container{
+  width:80%;
+  margin-left: 70px;
+}
+.image-container img{
+  height:200px;
+}
+
+/* Error/Loading Message Styling */
+.job-detail p.error, .job-detail p.loading {
+  color: red; /* Red for errors */
+  font-size: 18px; /* Bigger size for better visibility */
+  text-align: center; /* Centered messages */
+}
+
+.job-detail-modal img {
+  margin-top: 1rem;
+}
+/* bookmark component */ 
+.bookmarks-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bookmarks-container h1{
+  margin: 20px;
+}
+
+/* footer component */
+footer {
+  background-color: #333; 
+  color: #fff;
+  padding: 20px; 
+  text-align: center; 
+  position: relative;
+  bottom: 0; 
+  width: 100%;
+  height:auto;
+}
+.career-img img{
+  margin-top: 0px;
+  position:absolute;
+  top:5%;
+  right:10%;
+}
