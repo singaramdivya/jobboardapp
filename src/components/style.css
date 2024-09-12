@@ -407,9 +407,232 @@ footer {
   width: 100%;
   height:auto;
 }
-.career-img img{
-  margin-top: 0px;
-  position:absolute;
-  top:5%;
-  right:10%;
+
+
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+
+.menu.hidden {
+  display: none;
+}
+
+
+.menu.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.menu.active li {
+  margin: 10px 0;
+}
+
+
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-sub-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar .menu {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .navbar .menu li {
+    margin: 10px 0;
+  }
+
+  /* Display the hamburger menu icon */
+  .menu-icon {
+    display: block;
+    color: white;
+  }
+
+  /* Ensure that the menu appears when active */
+  .menu-icon.active {
+    display: flex;
+  }
+
+  /* Hide the "auth" link in mobile mode */
+  .auth {
+    display: none;
+  }
+
+  /* Hide navbar links */
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar ul.active {
+    display: flex;
+    z-index:100;
+    width:200px;
+  }
+  .hero-buttons {
+    display: flex;
+    flex-direction: row;
+  }
+  .hero-buttons button{
+    width:200px;
+    height:60px;
+    margin-bottom: 50px;
+  }
+  .top-section {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .jobs-container {
+    grid-template-columns: 1fr;
+  }
+
+  .side-filter {
+    display: none; /* Still hidden on tablets */
+  }
+
+  .button-section {
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+  }
+
+  .button-section button {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-sub-section h1 {
+    font-size: 1.5rem;
+  }
+
+
+  .menu-icon {
+    display: block;
+    position:absolute;
+    right:10%;
+  }
+
+ 
+  .menu-icon.active {
+    display: flex;
+  }
+
+  
+  .auth {
+    display: none;
+  }
+
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar ul.active {
+    display: flex;
+    z-index:100;
+    width:200px;
+  }
+  .hero-buttons {
+    display: flex;
+    flex-direction: row;
+  }
+  .hero-buttons button{
+    width:200px;
+    height:60px;
+    margin-bottom: 50px;
+  }
+  
+  .filter-group, .filter-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .filter-group input, .filter-group select {
+    width: 100%;
+  }
+  .navbar .logo {
+    font-size: 18px;
+
+  }
+
+  .navbar .menu li a {
+    font-size: 16px;
+  }
+  .top-section {
+    flex-direction: column;
+  }
+
+  .jobs-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .job-card {
+    padding: 15px;
+  }
+
+  .job-card h3 {
+    font-size: 18px;
+  }
+
+  .job-card p {
+    font-size: 14px;
+  }
+
+  .job-card button {
+    font-size: 12px;
+  }
+
+  .filter-group input, .filter-group select {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .side-filter {
+    display: block;
+  }
 }
