@@ -390,7 +390,7 @@ footer {
   right:10%;
 }
 
-@media (max-width: 1230px) and (min-width: 769px) {
+@media (max-width: 1230px) and (min-width: 1000px) {
   .navbar {
     display: flex;
     align-items: center;
